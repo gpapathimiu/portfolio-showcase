@@ -23,4 +23,4 @@ Car Showcase is a dynamic website built with TypeScript and Next.js, designed to
 - Image Display: Utilizes another API to fetch and display images of the cars, enhancing visual appeal.
 - Filtering: Enables users to filter cars based on the factors of individual car data, allowing for easy navigation and exploration of the available inventory.
 
-Feel free to dive in, experiment with the features, and let your creativity flourish. Thank you for visiting my portfolio showcase, and happy exploring! 🚀
+Each project contains its own README.md file with instructions to get everything up and running. Feel free to dive in, experiment with the features, and let your creativity flourish. Thank you for visiting my portfolio showcase, and happy exploring! 🚀

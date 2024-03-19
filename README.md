@@ -1,6 +1,6 @@
 # Welcome to My Portfolio Showcase!
 
-This repository serves as a showcase for my projects, featuring two exciting applications: ArtHub and a Next.js project. Below, you'll find brief descriptions of each project along with instructions on how to navigate and run them locally.
+This repository serves as a showcase for my projects, featuring three exciting applications: ArtHub, Car Showcase, and Urbagreen. Below, you'll find brief descriptions of each project along with instructions on how to navigate and run them locally.
 
 ## ArtHub
 
@@ -19,8 +19,20 @@ Car Showcase is a dynamic website built with TypeScript and Next.js, designed to
 
 ### Features
 
-- Car Data: Fetches detailed car information such as year, fuel type, make, and more from an API.
-- Image Display: Utilizes another API to fetch and display images of the cars, enhancing visual appeal.
-- Filtering: Enables users to filter cars based on the factors of individual car data, allowing for easy navigation and exploration of the available inventory.
+- **Car Data:** Fetches detailed car information such as year, fuel type, make, and more from an API.
+- **Image Display:** Utilizes another API to fetch and display images of the cars, enhancing visual appeal.
+- **Filtering:** Enables users to filter cars based on the factors of individual car data, allowing for easy navigation and exploration of the available inventory.
+
+## Urbagreen
+
+Urbagreen is an ecology-focused project built with the MERN stack, aimed at promoting environmental awareness and sustainable living practices within urban communities. It serves as a platform for users to read tips, and find resources related to ecology and sustainable living. It  Additionally, it includes admin functionalities for managing user-generated content, such as approving posts and handling messages sent through the contact form.
+### Features
+
+- **User Authentication:** Users can sign up, log in, and manage their profiles.
+- **Blog Creation and Sharing:** Users can create and share blogs related to ecology and sustainable living.
+- **Admin Panel:** Admin users have access to additional functionalities, such as approving posts and viewing messages from the contact form.
+- **Contact Form:** Users can send messages to the admin team through a contact form.
+- **Interactive Quiz:** 
+
 
 Each project contains its own README.md file with instructions to get everything up and running. Feel free to dive in, experiment with the features, and let your creativity flourish. Thank you for visiting my portfolio showcase, and happy exploring! 🚀

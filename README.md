@@ -32,7 +32,7 @@ Urbagreen is an ecology-focused project built with the MERN stack, aimed at prom
 - **Blog Creation and Sharing:** Users can create and share blogs related to ecology and sustainable living.
 - **Admin Panel:** Admin users have access to additional functionalities, such as approving posts and viewing messages from the contact form.
 - **Contact Form:** Users can send messages to the admin team through a contact form.
-- **Interactive Quiz:** 
+- **Interactive Quiz:** Implementation of a dynamic quiz to determine each user's carbon footprint.
 
 
 Each project contains its own README.md file with instructions to get everything up and running. Feel free to dive in, experiment with the features, and let your creativity flourish. Thank you for visiting my portfolio showcase, and happy exploring! 🚀

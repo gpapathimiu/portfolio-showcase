@@ -57,11 +57,7 @@ const Navbar = () => {
 								className="text-lg  text-gray-500 dark:text-white hover:underline">
 								Your Profile
 							</a>
-						</>
-					) : (
-						<></>
-					)}
-					<button
+							<button
 						onClick={handleLogout}
 						className="bg-indigo-500 hover:bg-orange-400 border-none rounded-full text-white font-semibold  w-20 h-20 flex items-center justify-center">
 						<Link to="/" className="hover:no-underline">
@@ -69,6 +65,10 @@ const Navbar = () => {
 						</Link>
 					</button>
 				</div>
+						</>
+					) : (
+						<></>
+					)}
 			</div>
 		</nav>
 	);

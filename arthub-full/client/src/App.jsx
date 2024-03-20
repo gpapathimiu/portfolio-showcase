@@ -33,6 +33,7 @@ function App() {
         <Route path="about" element={<div><h2>Hello</h2></div>} />
       </>
     )}
+    <Route path="*" element={<RegisterPage />} />
     </Routes>
     </BrowserRouter>
   )

@@ -4,47 +4,68 @@ import { useAuth } from "../AuthContext";
 
 function Register() {
     const navigate = useNavigate();
-    const { register } = useAuth();
-    const [username, setUsername] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
-    const [usernameError, setUsernameError] = useState("");
-    const [emailError, setEmailError] = useState("");
-    const [passwordError, setPasswordError] = useState("");
-    const [confirmPasswordError, setConfirmPasswordError] = useState("");
-    const [generalError, setGeneralError] = useState("");
+	const { register } = useAuth();
+	const [username, setUsername] = useState("");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+	const [confirmPassword, setConfirmPassword] = useState("");
+	const [usernameError, setUsernameError] = useState("");
+	const [emailError, setEmailError] = useState("");
+	const [passwordError, setPasswordError] = useState("");
+	const [confirmPasswordError, setConfirmPasswordError] = useState("");
+	const [generalError, setGeneralError] = useState("");
 
-    const handleUsernameError = () => {
-        setUsernameError(username.length < 1 ? "Please input a username!" : username.length < 3 ? "Username must be longer than 3 characters." : "");
-    };
+	const handleUsernameError = () => {
+		if (username.length < 1) {
+			setUsernameError("Please input a username!");
+		} else if (username.length < 3) {
+			setUsernameError("Username must be longer than 3 characters.");
+		} else {
+			setUsernameError("");
+		}
+	};
 
-    const handleEmailError = () => {
-        setEmailError(email.length < 1 ? "Please input an email!" : email.length < 3 ? "Email must be longer than 3 characters." : "");
-    };
+	const handleEmailError = () => {
+		if (email.length < 1) {
+			setEmailError("Please input an email!");
+		} else if (email.length < 3) {
+			setEmailError("Email must be longer than 3 characters.");
+		} else {
+			setEmailError("");
+		}
+	};
 
-    const handlePasswordError = () => {
-        setPasswordError(password.length < 1 ? "Please input a password!" : password.length < 6 ? "Password must be longer than 6 characters." : "");
-    };
+	const handlePasswordError = () => {
+		if (password.length < 1) {
+			setPasswordError("Please input a password!");
+		} else if (password.length < 6) {
+			setPasswordError("Password must be longer than 6 characters.");
+		} else {
+			setPasswordError("");
+		}
+	};
 
-    const handleConfirmPasswordError = () => {
-        setConfirmPasswordError(password !== confirmPassword ? "Passwords must match!" : "");
-    };
+	const handleConfirmPasswordError = () => {
+		if (password !== confirmPassword) {
+			setConfirmPasswordError("Passwords must match!");
+		} else {
+			setConfirmPasswordError("");
+		}
+	};
 
-    const handleRegister = async (e) => {
-        e.preventDefault();
-        handleUsernameError();
-        handleEmailError();
-        handlePasswordError();
-        handleConfirmPasswordError();
-
-        try {
-            await register(username, email, password, confirmPassword);
-            navigate("/dashboard");
-        } catch (error) {
-            setGeneralError("Some errors");
-        }
-    };
+	const handleRegister = async (e) => {
+		e.preventDefault();
+		handleUsernameError();
+		handleEmailError();
+		handlePasswordError();
+		handleConfirmPasswordError();
+		try {
+			await register(username, email, password, confirmPassword);
+			navigate("/dashboard");
+		} catch (error) {
+			setGeneralError("Some errors");
+		}
+	};
 
     return (
         <div className="w-full max-w-md mx-auto p-8 bg-white rounded-lg shadow-md">

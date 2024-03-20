@@ -4,7 +4,6 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 
 function Login() {
     const { login } = useAuth();
-    const location = useLocation();
     const navigate = useNavigate();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -12,13 +11,23 @@ function Login() {
     const [passwordError, setPasswordError] = useState("");
     const [generalError, setGeneralError] = useState("");
 
+
     const handleUsernameError = () => {
-        setUsernameError(username.length < 1 ? 'Please input a username!' : '');
+        if (username.length < 1) {
+            setUsernameError('Please input a username!');
+        } else {
+            setUsernameError('');
+        }
     };
 
     const handlePasswordError = () => {
-        setPasswordError(password.length < 1 ? 'Please input a password!' : '');
+        if (password.length < 1) {
+            setPasswordError('Please input a password!');
+        } else {
+            setPasswordError('');
+        }
     };
+
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -26,16 +35,12 @@ function Login() {
         handlePasswordError();
         try {
             await login(username, password);
-            if(location !== "/") {
-                navigate(location)
-            } else {
-                navigate('/dashboard');
-            }
+            navigate('/dashboard')
         } catch (err) {
             console.log(err);
-            setGeneralError('Login failed. Please try again.');
         }
-    };
+    }
+
 
     return (
         <div className="w-full max-w-md mx-auto p-8 bg-white rounded-lg shadow-md">

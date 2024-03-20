@@ -44,7 +44,7 @@ function Profile(props) {
 		<div className="w-full">
 			<div className="flex flex-col gap-4 rounded-lg">
 				{userPosts &&
-					userPosts.map((post, idx) => (
+					userPosts?.map((post, idx) => (
 						<div
 							key={idx}
 							className="mx-auto container px-4 py-3 hover:bg-orange-400 hover:bg-opacity-15 hover:cursor-pointer w-full rounded-lg">
@@ -89,6 +89,14 @@ function Profile(props) {
 							</div>
 						</div>
 					))}
+				{(!userPosts || userPosts.length < 1) && (
+					<div className="py-24">
+						<div className="flex flex-col justify-center items-center">
+							<p className="text-3xl font-semibold text-blue-700 ">You have not posted anything yet.</p>
+							<p className="text-lg font-medium text-blue-700">Make sure to create one before you go!</p>
+						</div>
+					</div>
+				)}
 			</div>
 		</div>
 	);

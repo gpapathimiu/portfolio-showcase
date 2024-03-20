@@ -36,7 +36,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className="bg-white border-gray-200 dark:bg-blue-800">
+		<nav className="border-gray-200 bg-blue-800">
 			<div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-2">
 				<a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
 					<img src="/logo.png" className="h-16" alt="Arthub Logo" />

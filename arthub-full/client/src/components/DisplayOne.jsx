@@ -191,9 +191,6 @@ function DisplayOne(props) {
 								} border-none rounded-md text-white font-semibold w-20 h-10 flex items-center justify-center`}>
 								{isLiked ? "Dislike" : "Like"}
 							</button>
-							<button className="bg-blue-800 hover:bg-orange-400 border-none rounded-md text-white font-semibold w-20 h-10 flex items-center justify-center">
-								Share
-							</button>
 							{userId == post?.user ? (
 								<button
 									onClick={handleDelete}
